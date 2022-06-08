@@ -19,6 +19,6 @@ public class Teacher {
     private String email;
     @NotBlank
     private String lastName;
-    @ManyToMany(mappedBy = "school_class")
+    @ManyToMany
     private List<SchoolClass> classList;
 }
