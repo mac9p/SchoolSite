@@ -24,5 +24,13 @@ public class Grade {
     @JoinColumn(name = "student_id")
     private Student student;
 
+    private String studentCredentials = student.getFirstName() + " " + student.getLastName();
+
+    private String schoolSubjectName = subject.getName();
+
+    @ManyToOne
+    @JoinColumn(name = "school_class_id")
+    private SchoolClass schoolClass;
+
 
 }
