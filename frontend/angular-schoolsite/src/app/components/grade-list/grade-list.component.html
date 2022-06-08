@@ -1,0 +1,25 @@
+<table class="table">
+
+  <thead>
+  <tr>
+    <th>Grade</th>
+    <th>Student name</th>
+    <th>Date</th>
+    <th>Subject name</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let grade of grades">
+    <td style="margin-right: auto">
+      {{grade.grade}}
+    </td>
+    <td>{{grade.studentCredentials}}</td>
+    <td>{{grade.date}}</td>
+    <td>{{grade.schoolSubjectName}}</td>
+  </tr>
+  </tbody>
+
+
+
+</table>
