@@ -2,6 +2,7 @@ package com.github.mac9p.schoolsite.controllers;
 
 import com.github.mac9p.schoolsite.model.Grade;
 import com.github.mac9p.schoolsite.services.GradeService;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class GradeController {
     }
 
     @GetMapping("/all")
+
     private List<Grade> getAllGrades(){
         return gradeService.findAllGrades();
     }
