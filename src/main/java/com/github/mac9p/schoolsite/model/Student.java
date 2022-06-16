@@ -25,6 +25,9 @@ public class Student {
     @JoinColumn(name = "school_class_id")
     private SchoolClass schoolClass;
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
     private List<Grade> gradeList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+    private List<Attention> attentions = new ArrayList<>();
 }

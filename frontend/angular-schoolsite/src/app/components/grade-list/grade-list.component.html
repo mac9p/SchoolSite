@@ -2,15 +2,15 @@
 
   <thead>
   <tr>
-    <th>Grade</th>
-    <th>Student name</th>
-    <th>Date</th>
-    <th>Subject name</th>
+    <th style="margin-right: auto">Grade</th>
+    <th style="margin-right: auto">Student name</th>
+    <th style="margin-right: auto">Date</th>
+    <th style="margin-right: auto">Subject name</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let grade of grades">
-    <td style="margin-right: auto">
+    <td >
       {{grade.grade}}
     </td>
     <td>{{getStudentCredentialsByGradeId(grade.id)}}</td>

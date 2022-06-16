@@ -1,0 +1,26 @@
+<table class="table">
+
+  <thead>
+  <tr>
+    <th style="margin-right: auto">points</th>
+    <th style="margin-right: auto">Student name</th>
+    <th style="margin-right: auto">Teacher name</th>
+    <th style="margin-right: auto">Description</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let attention of attentions">
+    <td >
+      {{attention.points}}
+    </td>
+    <td>{{attention.studentName}}</td>
+    <td>{{attention.teacherName}}</td>
+    <td>{{attention.description}}</td>
+    <td>{{attention.date}}</td>
+  </tr>
+  </tbody>
+
+
+
+</table>

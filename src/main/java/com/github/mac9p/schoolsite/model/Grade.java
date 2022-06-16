@@ -26,9 +26,9 @@ public class Grade {
     private Student student;
 
 
-
     @ManyToOne
     @JoinColumn(name = "school_class_id")
     private SchoolClass schoolClass;
+
 
 }

@@ -8,9 +8,11 @@ import {RouterModule, Routes} from "@angular/router";
 import { GradeListComponent } from './components/grade-list/grade-list.component';
 import {GradeService} from "./services/grade.service";
 import {HttpClientModule} from "@angular/common/http";
+import { AttentionListComponent } from './components/attention-list/attention-list.component';
 
 const routes: Routes = [
   {path: "grades",component: GradeListComponent},
+  {path: "attentions",component: AttentionListComponent},
   {path: "",component: AppComponent}
 ]
 
@@ -18,7 +20,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ActionMenuComponent,
-    GradeListComponent
+    GradeListComponent,
+    AttentionListComponent
   ],
   imports: [
     HttpClientModule,

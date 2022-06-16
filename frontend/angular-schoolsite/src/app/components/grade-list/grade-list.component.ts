@@ -38,5 +38,6 @@ export class GradeListComponent implements OnInit {
     this.schoolSubjectService.getSchoolSubjectByGradeId(id).subscribe(data => subject = data);
     return subject.name;
   }
+  //TODO optimize
 
 }
