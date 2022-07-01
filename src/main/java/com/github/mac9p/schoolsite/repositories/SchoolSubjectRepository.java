@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SchoolSubjectRepository extends JpaRepository<SchoolSubject,Long> {
     public SchoolSubject findSchoolSubjectById(Long id);
+    public SchoolSubject findSchoolSubjectByName(String name);
 }

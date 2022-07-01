@@ -10,15 +10,14 @@
   </thead>
   <tbody>
   <tr *ngFor="let grade of grades">
-    <td >
+    <td>
       {{grade.grade}}
     </td>
-    <td>{{getStudentCredentialsByGradeId(grade.id)}}</td>
+    <td>{{grade.studentCredentials}}</td>
     <td>{{grade.date}}</td>
-    <td>{{getSubjectNameByGradeId(grade.id)}}</td>
+    <td>{{grade.subjectName}}</td>
   </tr>
   </tbody>
-
 
 
 </table>

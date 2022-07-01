@@ -1,8 +1,7 @@
 package com.github.mac9p.schoolsite.controllers;
 
-import com.github.mac9p.schoolsite.model.Grade;
+import com.github.mac9p.schoolsite.dtos.GradeDto;
 import com.github.mac9p.schoolsite.services.GradeService;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,16 +18,15 @@ public class GradeController {
     }
 
     @GetMapping("/all")
-
-    private List<Grade> getAllGrades(){
+    private List<GradeDto> getAllGrades(){
         return gradeService.findAllGrades();
     }
     @GetMapping("/studentId")
-    private List<Grade> getGradesByStudentId(@RequestParam Long id){
+    private List<GradeDto> getGradesByStudentId(@RequestParam Long id){
         return gradeService.findAllByStudentId(id);
     }
     @GetMapping("/classId")
-    private List<Grade> getAllGradesByClassId(@RequestParam Long id){
+    private List<GradeDto> getAllGradesByClassId(@RequestParam Long id){
         return gradeService.findAllByClassId(id);
     }
 

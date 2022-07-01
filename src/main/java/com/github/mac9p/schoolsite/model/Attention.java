@@ -4,6 +4,9 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
 @Entity
@@ -20,22 +23,16 @@ public class Attention {
     @ManyToOne
     private Student student;
 
-    @Transient
-    private String studentName;
 
     @JoinColumn(name = "teacher_id")
     @ManyToOne
     private Teacher teacher;
 
-    @Transient
-    private String teacherName;
-
-    public String getStudentName(){
-        return student.getFirstName()+" "+student.getLastName();
-    }
-    public String getTeacherName(){
-        return teacher.getFirstName()+" "+teacher.getLastName();
-    }
+    @NotBlank
+    private String description;
+    @Min(-100)
+    @Max(100)
+    private Integer points;
 
 }
 

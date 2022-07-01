@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Grade} from "../../common/grade";
 import {GradeService} from "../../services/grade.service";
 import {StudentService} from "../../services/student.service";
@@ -14,30 +14,30 @@ import {Subject} from "rxjs";
 })
 export class GradeListComponent implements OnInit {
   grades!: Grade[];
-  constructor(private gradeService: GradeService,
-              private studentService: StudentService,
-              private schoolSubjectService: SchoolSubjectService) { }
+
+  constructor(private gradeService: GradeService) {
+  }
 
   ngOnInit(): void {
     this.getAllGrades();
   }
 
-  getAllGrades(){
+  getAllGrades() {
     this.gradeService.getAllGrades().subscribe(data => this.grades = data);
   }
 
 
-  getStudentCredentialsByGradeId(id:number): String{
-    let student = new Student();
-    this.studentService.findStudentByGradeId(id).subscribe(data => student = data);
-    return student.firstName+" "+student.lastName;
-  }
+  /* getStudentCredentialsByGradeId(id:number): String{
+     let student = new Student();
+     this.studentService.findStudentByGradeId(id).subscribe(data => student = data);
+     return student.firstName+" "+student.lastName;
+   }
 
-  getSubjectNameByGradeId(id:number): String{
-    let subject = new SchoolSubject();
-    this.schoolSubjectService.getSchoolSubjectByGradeId(id).subscribe(data => subject = data);
-    return subject.name;
-  }
+   getSubjectNameByGradeId(id:number): String{
+     let subject = new SchoolSubject();
+     this.schoolSubjectService.getSchoolSubjectByGradeId(id).subscribe(data => subject = data);
+     return subject.name;
+   }*/
   //TODO optimize
 
 }

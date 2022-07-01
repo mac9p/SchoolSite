@@ -1,8 +1,7 @@
 export class Grade {
   id!: number;
-  schoolSubjectId!: number;
-  schoolClassId!: number;
+  subjectName!: string;
+  studentCredentials!: string;
   grade!: number;
   date!: number;
-  studentId!: number;
 }

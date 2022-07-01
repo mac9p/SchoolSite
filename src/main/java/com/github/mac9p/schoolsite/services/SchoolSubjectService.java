@@ -22,4 +22,7 @@ public class SchoolSubjectService {
     public SchoolSubject getSchoolSubjectById(Long id){
         return schoolSubjectRepository.findSchoolSubjectById(id);
     }
+
+    public SchoolSubject findSchoolSubjectByName(String name){return schoolSubjectRepository.
+            findSchoolSubjectByName(name);}
 }
